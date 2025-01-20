@@ -1,0 +1,112 @@
+﻿<ContentPage
+    x:Class="BangkokTravel.Pages.DetailPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Detail"
+    NavigationPage.HasNavigationBar="False">
+    <Grid>
+        <!--  Define Layout Rows  -->
+        <Grid.RowDefinitions>
+            <!--  Main Content  -->
+            <RowDefinition Height="*" />
+            <!--  Footer  -->
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!--  Main Content Area  -->
+        <ScrollView Grid.Row="0">
+            <Grid Padding="15">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="380" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <!--  Back Button  -->
+                <AbsoluteLayout ZIndex="1">
+                    <Button
+                        x:Name="backBtnFromDetailPage"
+                        AbsoluteLayout.LayoutBounds="0.025,0.025,50,50"
+                        AbsoluteLayout.LayoutFlags="PositionProportional"
+                        BackgroundColor="White"
+                        Clicked="backBtnFromDetailPage_Clicked"
+                        ImageSource="backicon" />
+                </AbsoluteLayout>
+
+                <!--  Image  -->
+                <Border StrokeShape="RoundRectangle 20,20,20,20" StrokeThickness="0">
+                    <Image Aspect="AspectFill" Source="{Binding img}" />
+                </Border>
+
+                <!--  Content  -->
+                <VerticalStackLayout
+                    Grid.Row="1"
+                    Margin="0,20,0,0"
+                    Spacing="10">
+                    <Label
+                        FontFamily="ManropeBold"
+                        FontSize="24"
+                        Text="{Binding name}" />
+                    <Grid>
+                        <HorizontalStackLayout VerticalOptions="Center">
+                            <Label
+                                FontAttributes="Bold"
+                                FontSize="14"
+                                Text="opening: " />
+                            <Label FontSize="14" Text="{Binding opening_hours}" />
+                        </HorizontalStackLayout>
+                        <ImageButton
+                            x:Name="favoriteBtn"
+                            Margin="0,0,10,0"
+                            Clicked="favoriteBtn_Clicked"
+                            HeightRequest="30"
+                            HorizontalOptions="End"
+                            Source="fillhearticon" />
+                    </Grid>
+                    <Label
+                        x:Name="descriptionLabel"
+                        FontSize="16"
+                        LineBreakMode="TailTruncation"
+                        MaxLines="7"
+                        Text="{Binding description}" />
+                    <Border Margin="0,-7,0,0" StrokeThickness="0">
+                        <Border.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="ReadMoreBtn" Tapped="ReadMoreBtn_Tapped" />
+                        </Border.GestureRecognizers>
+                        <Label Text="Read More" TextColor="#006fb9" />
+                    </Border>
+                </VerticalStackLayout>
+            </Grid>
+        </ScrollView>
+
+        <!--  Footer  -->
+        <Grid
+            Grid.Row="1"
+            Margin="0,0,0,10"
+            Padding="15"
+            BackgroundColor="White"
+            ColumnSpacing="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <VerticalStackLayout>
+                <Label FontFamily="ManropeBold" Text="Price" />
+                <Label
+                    FontFamily="ManropeBold"
+                    FontSize="24"
+                    Text="{Binding entrance_fee}"
+                    TextColor="#006fb9" />
+            </VerticalStackLayout>
+            <Button
+                x:Name="showMapBtn"
+                Grid.Column="1"
+                BackgroundColor="#006fb9"
+                Clicked="showMapBtn_Clicked"
+                FontFamily="ManropeBold"
+                FontSize="16"
+                HorizontalOptions="FillAndExpand"
+                ImageSource="mapicon"
+                Text="Show Map" />
+        </Grid>
+    </Grid>
+</ContentPage>

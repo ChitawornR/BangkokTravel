@@ -1,0 +1,208 @@
+<ContentPage
+    x:Class="BangkokTravel.Pages.HomePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="HomePage"
+    NavigationPage.HasNavigationBar="False">
+    <ScrollView VerticalScrollBarVisibility="Never">
+        <VerticalStackLayout Padding="25" Spacing="10">
+            <Grid>
+                <VerticalStackLayout>
+                    <Label FontSize="12" Text="Explore" />
+                    <Label
+                        FontFamily="ManropeBold"
+                        FontSize="30"
+                        HorizontalOptions="StartAndExpand"
+                        Text="Bangkok" />
+                </VerticalStackLayout>
+                <!--  Nav to FavoritePage Button  -->
+                <Button
+                    x:Name="navFavoritePageBtn"
+                    BackgroundColor="Transparent"
+                    Clicked="navFavoritePageBtn_Clicked"
+                    HorizontalOptions="End"
+                    ImageSource="fillhearticon" />
+            </Grid>
+
+            <!--  Search Bar  -->
+            <Border
+                Padding="-4"
+                StrokeShape="RoundRectangle 20,20,20,20"
+                StrokeThickness="0">
+                <SearchBar
+                    x:Name="homePageSearchBar"
+                    BackgroundColor="#EEF3F6"
+                    Placeholder="Search . . ."
+                    TextChanged="homePageSearchBar_TextChanged" />
+            </Border>
+
+            <!--  Searched result  -->
+            <ListView
+                x:Name="searchResultListView"
+                IsVisible="False"
+                ItemTapped="SearchResultListView_ItemTapped"
+                ItemsSource="{Binding AllPlaces.SearchedPlaceItems}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding name}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <!--  Category Buttons  -->
+            <HorizontalStackLayout
+                Margin="0,25,0,0"
+                HorizontalOptions="Center"
+                Spacing="25">
+                <Button
+                    x:Name="historicalBtn"
+                    BackgroundColor="#006fb9"
+                    Clicked="historicalBtn_Clicked"
+                    ImageSource="templeicon.png" />
+                <Button
+                    x:Name="natureAndParks"
+                    BackgroundColor="#006fb9"
+                    Clicked="natureAndParksBtn_Clicked"
+                    ImageSource="parkicon.png" />
+                <Button
+                    x:Name="shoppingBtn"
+                    BackgroundColor="#006fb9"
+                    Clicked="shoppingBtn_Clicked"
+                    ImageSource="shoppingicon.png" />
+                <Button
+                    x:Name="lifestyleAndNightlifeBtn"
+                    BackgroundColor="#006fb9"
+                    Clicked="lifestyleAndNightlifeBtn_Clicked"
+                    ImageSource="beericon.png" />
+            </HorizontalStackLayout>
+
+            <!--  All Place Button  -->
+            <StackLayout>
+                <Button
+                    x:Name="allPlaceBtn"
+                    BackgroundColor="#006fb9"
+                    Clicked="allPlaceBtn_Clicked"
+                    Text="See All Pages -&gt;" />
+            </StackLayout>
+
+            <!--  Popular Section  -->
+            <VerticalStackLayout Margin="0,20,0,0" Spacing="10">
+                <Label
+                    FontFamily="ManropeBold"
+                    FontSize="20"
+                    Text="Popular" />
+                <CollectionView HorizontalScrollBarVisibility="Never" ItemsSource="{Binding PopularPlace.PopularItems}">
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout ItemSpacing="10" Orientation="Horizontal" />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Border
+                                HeightRequest="325"
+                                StrokeShape="RoundRectangle 20,20,20,20"
+                                StrokeThickness="0"
+                                WidthRequest="170">
+                                <Border.GestureRecognizers>
+                                    <TapGestureRecognizer CommandParameter="{Binding}" Tapped="PopularTapGestureRecognizer_Tapped" />
+                                </Border.GestureRecognizers>
+                                <AbsoluteLayout>
+                                    <Image
+                                        Aspect="AspectFill"
+                                        HeightRequest="325"
+                                        Source="{Binding img}"
+                                        WidthRequest="170" />
+                                    <Border
+                                        AbsoluteLayout.LayoutBounds="0.5,1,1,0.27"
+                                        AbsoluteLayout.LayoutFlags="All"
+                                        StrokeShape="RoundRectangle 0,0,20,20"
+                                        StrokeThickness="0">
+                                        <ContentView BackgroundColor="Black" Opacity="0.5" />
+                                    </Border>
+                                    <VerticalStackLayout
+                                        Padding="10"
+                                        AbsoluteLayout.LayoutBounds="0,0.9,1,0.2"
+                                        AbsoluteLayout.LayoutFlags="All">
+                                        <Label
+                                            FontFamily="ManropeSemiBold"
+                                            FontSize="15"
+                                            HorizontalTextAlignment="Start"
+                                            LineBreakMode="TailTruncation"
+                                            MaxLines="2"
+                                            Text="{Binding name}"
+                                            TextColor="White" />
+                                        <Label
+                                            FontSize="12"
+                                            LineBreakMode="TailTruncation"
+                                            MaxLines="2"
+                                            Text="{Binding description}"
+                                            TextColor="LightGray" />
+                                    </VerticalStackLayout>
+                                </AbsoluteLayout>
+                            </Border>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </VerticalStackLayout>
+
+            <!--  Recommend Section  -->
+            <VerticalStackLayout Margin="0,20,0,0" Spacing="10">
+                <Label
+                    FontFamily="ManropeBold"
+                    FontSize="20"
+                    Text="Recommend" />
+                <CollectionView HorizontalScrollBarVisibility="Never" ItemsSource="{Binding RecommendPlace.RecommendItems}">
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout ItemSpacing="10" Orientation="Horizontal" />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Border
+                                HeightRequest="325"
+                                StrokeShape="RoundRectangle 20,20,20,20"
+                                StrokeThickness="0"
+                                WidthRequest="170">
+                                <Border.GestureRecognizers>
+                                    <TapGestureRecognizer CommandParameter="{Binding}" Tapped="RecommendTapGestureRecognizer_Tapped" />
+                                </Border.GestureRecognizers>
+                                <AbsoluteLayout>
+                                    <Image
+                                        Aspect="AspectFill"
+                                        HeightRequest="325"
+                                        Source="{Binding img}"
+                                        WidthRequest="170" />
+                                    <Border
+                                        AbsoluteLayout.LayoutBounds="0.5,1,1,0.27"
+                                        AbsoluteLayout.LayoutFlags="All"
+                                        StrokeShape="RoundRectangle 0,0,20,20"
+                                        StrokeThickness="0">
+                                        <ContentView BackgroundColor="Black" Opacity="0.5" />
+                                    </Border>
+                                    <VerticalStackLayout
+                                        Padding="10"
+                                        AbsoluteLayout.LayoutBounds="0,0.9,1,0.2"
+                                        AbsoluteLayout.LayoutFlags="All">
+                                        <Label
+                                            FontFamily="ManropeSemiBold"
+                                            FontSize="15"
+                                            HorizontalTextAlignment="Start"
+                                            LineBreakMode="TailTruncation"
+                                            MaxLines="2"
+                                            Text="{Binding name}"
+                                            TextColor="White" />
+                                        <Label
+                                            FontSize="12"
+                                            LineBreakMode="TailTruncation"
+                                            MaxLines="2"
+                                            Text="{Binding description}"
+                                            TextColor="LightGray" />
+                                    </VerticalStackLayout>
+                                </AbsoluteLayout>
+                            </Border>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </VerticalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="BangkokTravel.Pages.FavoritePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:BangkokTravel.ViewModels"
+    Title="FavoritePage"
+    NavigationPage.HasNavigationBar="False">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="10">
+            <!--  Header  -->
+            <HorizontalStackLayout Margin="0,5,0,0">
+                <Button
+                    BackgroundColor="Transparent"
+                    Clicked="backBtnFromFavoritePage_Clicked"
+                    ImageSource="backicon" />
+                <Label
+                    FontFamily="ManropeBold"
+                    FontSize="30"
+                    HorizontalOptions="Center"
+                    Text="Favorite Place"
+                    VerticalOptions="Center" />
+            </HorizontalStackLayout>
+            <!--  Fetch Favorite Items  -->
+            <CollectionView ItemsSource="{Binding FavoriteItems}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <!--  ใช้ SwipeView ครอบรายการ  -->
+                        <SwipeView>
+                            <!--  เมนูการ Swipe  -->
+                            <SwipeView.RightItems>
+                                <SwipeItems>
+                                    <SwipeItem
+                                        BackgroundColor="Red"
+                                        CommandParameter="{Binding}"
+                                        IconImageSource="deleteicon"
+                                        Invoked="OnDeleteItemInvoked"
+                                        Text="Delete" />
+                                </SwipeItems>
+                            </SwipeView.RightItems>
+
+                            <!--  Item  -->
+                            <Border
+                                Margin="0,10,0,0"
+                                HeightRequest="150"
+                                StrokeShape="RoundRectangle 15,15,15,15">
+                                <Border.GestureRecognizers>
+                                    <TapGestureRecognizer CommandParameter="{Binding}" Tapped="TapGestureRecognizer_Tapped" />
+                                </Border.GestureRecognizers>
+                                <HorizontalStackLayout>
+                                    <!--  Image  -->
+                                    <Image
+                                        Aspect="AspectFill"
+                                        Source="{Binding img}"
+                                        WidthRequest="150" />
+                                    <!--  Text  -->
+                                    <VerticalStackLayout
+                                        Padding="10"
+                                        Spacing="5"
+                                        WidthRequest="225">
+                                        <Label
+                                            FontFamily="ManropeBold"
+                                            FontSize="17"
+                                            LineBreakMode="TailTruncation"
+                                            Text="{Binding name}" />
+                                        <Label
+                                            LineBreakMode="TailTruncation"
+                                            MaxLines="3"
+                                            Text="{Binding description}" />
+                                        <!--  Button in item  -->
+                                        <Grid Margin="0,5,0,0" Padding="0,0,5,0">
+                                            <Label
+                                                HorizontalOptions="Start"
+                                                Text="{Binding opening_hours}"
+                                                TextColor="Red"
+                                                WidthRequest="150" />
+                                            <Label
+                                                HorizontalOptions="End"
+                                                Text="{Binding entrance_fee}"
+                                                TextColor="#006fb9"
+                                                VerticalOptions="Center" />
+                                        </Grid>
+                                    </VerticalStackLayout>
+                                </HorizontalStackLayout>
+                            </Border>
+                        </SwipeView>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+</ContentPage>

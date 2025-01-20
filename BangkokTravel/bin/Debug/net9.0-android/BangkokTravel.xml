@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BangkokTravel</name>
+    </assembly>
+    <members>
+        <member name="T:BangkokTravel.ViewModels.AllPlaceViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:BangkokTravel.ViewModels.AllPlaceViewModel.AllPlaceItems">
+            <inheritdoc cref="F:BangkokTravel.ViewModels.AllPlaceViewModel.allPlaceItems"/>
+        </member>
+        <member name="P:BangkokTravel.ViewModels.AllPlaceViewModel.FilteredPlaceItems">
+            <inheritdoc cref="F:BangkokTravel.ViewModels.AllPlaceViewModel.filteredPlaceItems"/>
+        </member>
+        <member name="P:BangkokTravel.ViewModels.AllPlaceViewModel.SearchedPlaceItems">
+            <inheritdoc cref="F:BangkokTravel.ViewModels.AllPlaceViewModel.searchedPlaceItems"/>
+        </member>
+        <member name="T:BangkokTravel.ViewModels.FavoritePlaceViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:BangkokTravel.ViewModels.FavoritePlaceViewModel.FavoriteItems">
+            <inheritdoc cref="F:BangkokTravel.ViewModels.FavoritePlaceViewModel.favoriteItems"/>
+        </member>
+        <member name="T:BangkokTravel.ViewModels.HomePagePopularPlaceViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:BangkokTravel.ViewModels.HomePagePopularPlaceViewModel.PopularItems">
+            <inheritdoc cref="F:BangkokTravel.ViewModels.HomePagePopularPlaceViewModel.popularItems"/>
+        </member>
+        <member name="T:BangkokTravel.ViewModels.HomePageRecommendPlaceViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:BangkokTravel.ViewModels.HomePageRecommendPlaceViewModel.RecommendItems">
+            <inheritdoc cref="F:BangkokTravel.ViewModels.HomePageRecommendPlaceViewModel.recommendItems"/>
+        </member>
+        <member name="T:BangkokTravel.Resource">
+            <summary>
+            Android Resource Designer class.
+            Exposes the Android Resource designer assembly into the project Namespace.
+            </summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.AllPlaceItems">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "AllPlaceItems" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.FilteredPlaceItems">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "FilteredPlaceItems" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SearchedPlaceItems">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SearchedPlaceItems" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.FavoriteItems">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "FavoriteItems" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PopularItems">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PopularItems" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.RecommendItems">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "RecommendItems" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.AllPlaceItems">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "AllPlaceItems" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.FilteredPlaceItems">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "FilteredPlaceItems" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SearchedPlaceItems">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SearchedPlaceItems" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.FavoriteItems">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "FavoriteItems" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PopularItems">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PopularItems" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.RecommendItems">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "RecommendItems" generated properties.</summary>
+        </member>
+    </members>
+</doc>

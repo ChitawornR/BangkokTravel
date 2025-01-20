@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="BangkokTravel.Pages.WelcomePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundImageSource="backgroundbkk.jpg"
+    NavigationPage.HasNavigationBar="False">
+    <Grid Padding="25">
+        <!--  Logo  -->
+        <Label
+            Margin="0,20,0,0"
+            Padding="10"
+            FontAttributes="Bold"
+            FontFamily="PattayaRegular"
+            FontSize="65"
+            HorizontalTextAlignment="End"
+            Text="Bangkok Travel"
+            TextColor="White"
+            VerticalOptions="StartAndExpand" />
+
+        <VerticalStackLayout Spacing="10" VerticalOptions="EndAndExpand">
+            <!--  Text  -->
+            <VerticalStackLayout Margin="0,0,0,10">
+                <Label
+                    FontSize="20"
+                    LineBreakMode="WordWrap"
+                    Text="Best Experience in"
+                    TextColor="White" />
+                <Label
+                    FontFamily="ManropeBold"
+                    FontSize="50"
+                    Text="Bangkok,"
+                    TextColor="White" />
+                <Label
+                    FontFamily="ManropeBold"
+                    FontSize="50"
+                    Text="Thailand"
+                    TextColor="White" />
+            </VerticalStackLayout>
+            <!--  Button go to HomePage  -->
+            <Button
+                x:Name="navToHomePageBtn"
+                Margin="0,0,0,20"
+                BackgroundColor="#006fb9"
+                Clicked="navToHomePageBtn_Clicked"
+                Text="Les't Travel" />
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>
