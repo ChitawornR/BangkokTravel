@@ -7,16 +7,17 @@ public partial class CategoryPage : ContentPage
 {
 
     private AllPlaceViewModel _allPlaceViewModel;
+
     public CategoryPage(string selectedCategory = "All Place")
     {
         InitializeComponent();
-
         // รอโหลดข้อมูลก่อน
         LoadDataAsync(selectedCategory);
     }
 
     public async Task LoadDataAsync(string selectedCategory = "All Place")
     {
+        categoryPageContent.IsVisible = false;
         _allPlaceViewModel = new AllPlaceViewModel();
         await _allPlaceViewModel.LoadAllPlaceAsync();  // รอจนกว่าข้อมูลจะโหลดเสร็จ
         BindingContext = _allPlaceViewModel;
@@ -28,11 +29,13 @@ public partial class CategoryPage : ContentPage
 
         // กรองข้อมูลตามหมวดหมู่ที่เลือก
         _allPlaceViewModel.FilterItemsAsync(selectedCategory);
+        categoryPageContent.IsVisible = true;
     }
 
 
     private async void OnCategoryChanged(object sender, EventArgs e)
     {
+        categoryPageContent.IsVisible = false;
         var picker = sender as Picker;
         if (picker != null && picker.SelectedItem != null)
         {
@@ -42,6 +45,7 @@ public partial class CategoryPage : ContentPage
             // ตั้ง title ให้หัวของ Page
             titleCategoryPage.Text = selectedCategory;
         }
+        categoryPageContent.IsVisible = true;
     }
 
     async private void backBtnFromCategoryPage_Clicked(object sender, EventArgs e)
@@ -64,6 +68,7 @@ public partial class CategoryPage : ContentPage
 
     async private void searchResultListViewCategoryPage_ItemTapped(object sender, ItemTappedEventArgs e)
     {
+       
         if (e.Item is AllPlace selectedItem)
         {
             var detailPage = new DetailPage
@@ -76,6 +81,7 @@ public partial class CategoryPage : ContentPage
             // ยกเลิกการเลือก (เพื่อไม่ให้รายการคงเลือกอยู่)
             ((ListView)sender).SelectedItem = null;
         }
+        
     }
 
     async private void SearchBar_TextChanged(object sender, TextChangedEventArgs e)

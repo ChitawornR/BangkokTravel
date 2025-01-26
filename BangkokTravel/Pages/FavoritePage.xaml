@@ -26,63 +26,78 @@
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <!--  ใช้ SwipeView ครอบรายการ  -->
-                        <SwipeView>
+                        <SwipeView ZIndex="1">
                             <!--  เมนูการ Swipe  -->
                             <SwipeView.RightItems>
                                 <SwipeItems>
                                     <SwipeItem
-                                        BackgroundColor="Red"
+                                        BackgroundColor="#FF4743"
                                         CommandParameter="{Binding}"
                                         IconImageSource="deleteicon"
-                                        Invoked="OnDeleteItemInvoked"
-                                        Text="Delete" />
+                                        Invoked="OnDeleteItemInvoked" />
                                 </SwipeItems>
                             </SwipeView.RightItems>
 
                             <!--  Item  -->
-                            <Border
-                                Margin="0,10,0,0"
-                                HeightRequest="150"
-                                StrokeShape="RoundRectangle 15,15,15,15">
-                                <Border.GestureRecognizers>
-                                    <TapGestureRecognizer CommandParameter="{Binding}" Tapped="TapGestureRecognizer_Tapped" />
-                                </Border.GestureRecognizers>
-                                <HorizontalStackLayout>
-                                    <!--  Image  -->
-                                    <Image
-                                        Aspect="AspectFill"
-                                        Source="{Binding img}"
-                                        WidthRequest="150" />
-                                    <!--  Text  -->
-                                    <VerticalStackLayout
-                                        Padding="10"
-                                        Spacing="5"
-                                        WidthRequest="225">
-                                        <Label
-                                            FontFamily="ManropeBold"
-                                            FontSize="17"
-                                            LineBreakMode="TailTruncation"
-                                            Text="{Binding name}" />
-                                        <Label
-                                            LineBreakMode="TailTruncation"
-                                            MaxLines="3"
-                                            Text="{Binding description}" />
-                                        <!--  Button in item  -->
-                                        <Grid Margin="0,5,0,0" Padding="0,0,5,0">
+                            <StackLayout Padding="10">
+                                <Border
+                                    Margin="0,5,0,0"
+                                    BackgroundColor="White"
+                                    HeightRequest="150"
+                                    Stroke="Transparent"
+                                    StrokeShape="RoundRectangle 15,15,15,15">
+                                    <Border.Shadow>
+                                        <Shadow
+                                            Brush="Black"
+                                            Opacity="0.4"
+                                            Radius="10"
+                                            Offset="0,5" />
+                                    </Border.Shadow>
+
+                                    <Border.GestureRecognizers>
+                                        <TapGestureRecognizer CommandParameter="{Binding}" Tapped="TapGestureRecognizer_Tapped" />
+                                    </Border.GestureRecognizers>
+
+                                    <HorizontalStackLayout>
+                                        <!--  Image  -->
+                                        <Image
+                                            Aspect="AspectFill"
+                                            Source="{Binding img}"
+                                            WidthRequest="150" />
+                                        <!--  Text  -->
+                                        <VerticalStackLayout
+                                            Padding="10"
+                                            Spacing="5"
+                                            WidthRequest="212">
                                             <Label
-                                                HorizontalOptions="Start"
-                                                Text="{Binding opening_hours}"
-                                                TextColor="Red"
-                                                WidthRequest="150" />
+                                                FontFamily="ManropeBold"
+                                                FontSize="17"
+                                                LineBreakMode="TailTruncation"
+                                                Text="{Binding name}" />
                                             <Label
-                                                HorizontalOptions="End"
-                                                Text="{Binding entrance_fee}"
-                                                TextColor="#006fb9"
-                                                VerticalOptions="Center" />
-                                        </Grid>
-                                    </VerticalStackLayout>
-                                </HorizontalStackLayout>
-                            </Border>
+                                                FontSize="13"
+                                                LineBreakMode="TailTruncation"
+                                                MaxLines="3"
+                                                Text="{Binding description}" />
+                                            <!--  time and price  -->
+                                            <Grid Margin="0,7,0,0" Padding="0,0,15,0">
+                                                <Label
+                                                    FontSize="13"
+                                                    HorizontalOptions="Start"
+                                                    Text="{Binding opening_hours}"
+                                                    TextColor="Red"
+                                                    WidthRequest="125" />
+                                                <Label
+                                                    FontSize="13"
+                                                    HorizontalOptions="End"
+                                                    Text="{Binding entrance_fee}"
+                                                    TextColor="#006fb9"
+                                                    VerticalOptions="Center" />
+                                            </Grid>
+                                        </VerticalStackLayout>
+                                    </HorizontalStackLayout>
+                                </Border>
+                            </StackLayout>
                         </SwipeView>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>

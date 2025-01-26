@@ -1,12 +1,138 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Chittaworn\\source\\repos\\BangkokTravel\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2F4F2CFC-A1E8-4AD5-9E6D-E4E4FE1FC202}|BangkokTravel\\BangkokTravel.csproj|c:\\users\\chittaworn\\source\\repos\\bangkoktravel\\bangkoktravel\\pages\\homepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F4F2CFC-A1E8-4AD5-9E6D-E4E4FE1FC202}|BangkokTravel\\BangkokTravel.csproj|solutionrelative:bangkoktravel\\pages\\homepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F4F2CFC-A1E8-4AD5-9E6D-E4E4FE1FC202}|BangkokTravel\\BangkokTravel.csproj|c:\\users\\chittaworn\\source\\repos\\bangkoktravel\\bangkoktravel\\pages\\homepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2F4F2CFC-A1E8-4AD5-9E6D-E4E4FE1FC202}|BangkokTravel\\BangkokTravel.csproj|solutionrelative:bangkoktravel\\pages\\homepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F4F2CFC-A1E8-4AD5-9E6D-E4E4FE1FC202}|BangkokTravel\\BangkokTravel.csproj|c:\\users\\chittaworn\\source\\repos\\bangkoktravel\\bangkoktravel\\pages\\detailpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F4F2CFC-A1E8-4AD5-9E6D-E4E4FE1FC202}|BangkokTravel\\BangkokTravel.csproj|solutionrelative:bangkoktravel\\pages\\detailpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F4F2CFC-A1E8-4AD5-9E6D-E4E4FE1FC202}|BangkokTravel\\BangkokTravel.csproj|c:\\users\\chittaworn\\source\\repos\\bangkoktravel\\bangkoktravel\\pages\\detailpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2F4F2CFC-A1E8-4AD5-9E6D-E4E4FE1FC202}|BangkokTravel\\BangkokTravel.csproj|solutionrelative:bangkoktravel\\pages\\detailpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F4F2CFC-A1E8-4AD5-9E6D-E4E4FE1FC202}|BangkokTravel\\BangkokTravel.csproj|c:\\users\\chittaworn\\source\\repos\\bangkoktravel\\bangkoktravel\\pages\\categorypage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2F4F2CFC-A1E8-4AD5-9E6D-E4E4FE1FC202}|BangkokTravel\\BangkokTravel.csproj|solutionrelative:bangkoktravel\\pages\\categorypage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F4F2CFC-A1E8-4AD5-9E6D-E4E4FE1FC202}|BangkokTravel\\BangkokTravel.csproj|c:\\users\\chittaworn\\source\\repos\\bangkoktravel\\bangkoktravel\\pages\\favoritepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2F4F2CFC-A1E8-4AD5-9E6D-E4E4FE1FC202}|BangkokTravel\\BangkokTravel.csproj|solutionrelative:bangkoktravel\\pages\\favoritepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F4F2CFC-A1E8-4AD5-9E6D-E4E4FE1FC202}|BangkokTravel\\BangkokTravel.csproj|c:\\users\\chittaworn\\source\\repos\\bangkoktravel\\bangkoktravel\\pages\\welcomepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2F4F2CFC-A1E8-4AD5-9E6D-E4E4FE1FC202}|BangkokTravel\\BangkokTravel.csproj|solutionrelative:bangkoktravel\\pages\\welcomepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomePage.xaml",
+              "DocumentMoniker": "C:\\Users\\Chittaworn\\source\\repos\\BangkokTravel\\BangkokTravel\\Pages\\HomePage.xaml",
+              "RelativeDocumentMoniker": "BangkokTravel\\Pages\\HomePage.xaml",
+              "ToolTip": "C:\\Users\\Chittaworn\\source\\repos\\BangkokTravel\\BangkokTravel\\Pages\\HomePage.xaml",
+              "RelativeToolTip": "BangkokTravel\\Pages\\HomePage.xaml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAEAAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-26T15:11:14.049Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomePage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Chittaworn\\source\\repos\\BangkokTravel\\BangkokTravel\\Pages\\HomePage.xaml.cs",
+              "RelativeDocumentMoniker": "BangkokTravel\\Pages\\HomePage.xaml.cs",
+              "ToolTip": "C:\\Users\\Chittaworn\\source\\repos\\BangkokTravel\\BangkokTravel\\Pages\\HomePage.xaml.cs",
+              "RelativeToolTip": "BangkokTravel\\Pages\\HomePage.xaml.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAwwEEAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T15:11:15.701Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DetailPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Chittaworn\\source\\repos\\BangkokTravel\\BangkokTravel\\Pages\\DetailPage.xaml",
+              "RelativeDocumentMoniker": "BangkokTravel\\Pages\\DetailPage.xaml",
+              "ToolTip": "C:\\Users\\Chittaworn\\source\\repos\\BangkokTravel\\BangkokTravel\\Pages\\DetailPage.xaml",
+              "RelativeToolTip": "BangkokTravel\\Pages\\DetailPage.xaml",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAADgAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-25T13:44:35.546Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DetailPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Chittaworn\\source\\repos\\BangkokTravel\\BangkokTravel\\Pages\\DetailPage.xaml.cs",
+              "RelativeDocumentMoniker": "BangkokTravel\\Pages\\DetailPage.xaml.cs",
+              "ToolTip": "C:\\Users\\Chittaworn\\source\\repos\\BangkokTravel\\BangkokTravel\\Pages\\DetailPage.xaml.cs",
+              "RelativeToolTip": "BangkokTravel\\Pages\\DetailPage.xaml.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAIwEAAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T15:06:34.482Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "WelcomePage.xaml",
+              "DocumentMoniker": "C:\\Users\\Chittaworn\\source\\repos\\BangkokTravel\\BangkokTravel\\Pages\\WelcomePage.xaml",
+              "RelativeDocumentMoniker": "BangkokTravel\\Pages\\WelcomePage.xaml",
+              "ToolTip": "C:\\Users\\Chittaworn\\source\\repos\\BangkokTravel\\BangkokTravel\\Pages\\WelcomePage.xaml",
+              "RelativeToolTip": "BangkokTravel\\Pages\\WelcomePage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-25T13:39:41.486Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FavoritePage.xaml",
+              "DocumentMoniker": "C:\\Users\\Chittaworn\\source\\repos\\BangkokTravel\\BangkokTravel\\Pages\\FavoritePage.xaml",
+              "RelativeDocumentMoniker": "BangkokTravel\\Pages\\FavoritePage.xaml",
+              "ToolTip": "C:\\Users\\Chittaworn\\source\\repos\\BangkokTravel\\BangkokTravel\\Pages\\FavoritePage.xaml",
+              "RelativeToolTip": "BangkokTravel\\Pages\\FavoritePage.xaml",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAB0AAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-24T18:36:06.202Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CategoryPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Chittaworn\\source\\repos\\BangkokTravel\\BangkokTravel\\Pages\\CategoryPage.xaml",
+              "RelativeDocumentMoniker": "BangkokTravel\\Pages\\CategoryPage.xaml",
+              "ToolTip": "C:\\Users\\Chittaworn\\source\\repos\\BangkokTravel\\BangkokTravel\\Pages\\CategoryPage.xaml",
+              "RelativeToolTip": "BangkokTravel\\Pages\\CategoryPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-24T18:13:44.928Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

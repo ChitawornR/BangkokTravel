@@ -16,6 +16,9 @@
         <member name="P:BangkokTravel.ViewModels.AllPlaceViewModel.SearchedPlaceItems">
             <inheritdoc cref="F:BangkokTravel.ViewModels.AllPlaceViewModel.searchedPlaceItems"/>
         </member>
+        <member name="P:BangkokTravel.ViewModels.AllPlaceViewModel.IsLoading">
+            <inheritdoc cref="F:BangkokTravel.ViewModels.AllPlaceViewModel.isLoading"/>
+        </member>
         <member name="T:BangkokTravel.ViewModels.FavoritePlaceViewModel">
             <inheritdoc/>
         </member>
@@ -55,6 +58,9 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SearchedPlaceItems">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SearchedPlaceItems" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsLoading">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsLoading" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.FavoriteItems">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "FavoriteItems" generated properties.</summary>
         </member>
@@ -78,6 +84,9 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SearchedPlaceItems">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SearchedPlaceItems" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsLoading">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsLoading" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.FavoriteItems">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "FavoriteItems" generated properties.</summary>

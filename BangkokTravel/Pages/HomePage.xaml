@@ -53,27 +53,35 @@
             <HorizontalStackLayout
                 Margin="0,25,0,0"
                 HorizontalOptions="Center"
-                Spacing="25">
+                Spacing="20">
                 <Button
                     x:Name="historicalBtn"
                     BackgroundColor="#006fb9"
                     Clicked="historicalBtn_Clicked"
-                    ImageSource="templeicon.png" />
+                    CornerRadius="17"
+                    ImageSource="templeicon.png"
+                    WidthRequest="70" />
                 <Button
                     x:Name="natureAndParks"
                     BackgroundColor="#006fb9"
                     Clicked="natureAndParksBtn_Clicked"
-                    ImageSource="parkicon.png" />
+                    CornerRadius="17"
+                    ImageSource="parkicon.png"
+                    WidthRequest="70" />
                 <Button
                     x:Name="shoppingBtn"
                     BackgroundColor="#006fb9"
                     Clicked="shoppingBtn_Clicked"
-                    ImageSource="shoppingicon.png" />
+                    CornerRadius="17"
+                    ImageSource="shoppingicon.png"
+                    WidthRequest="70" />
                 <Button
                     x:Name="lifestyleAndNightlifeBtn"
                     BackgroundColor="#006fb9"
                     Clicked="lifestyleAndNightlifeBtn_Clicked"
-                    ImageSource="beericon.png" />
+                    CornerRadius="17"
+                    ImageSource="beericon.png"
+                    WidthRequest="70" />
             </HorizontalStackLayout>
 
             <!--  All Place Button  -->
@@ -82,6 +90,7 @@
                     x:Name="allPlaceBtn"
                     BackgroundColor="#006fb9"
                     Clicked="allPlaceBtn_Clicked"
+                    CornerRadius="17"
                     Text="See All Pages -&gt;" />
             </StackLayout>
 

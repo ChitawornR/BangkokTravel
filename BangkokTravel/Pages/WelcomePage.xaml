@@ -43,7 +43,7 @@
                 Margin="0,0,0,20"
                 BackgroundColor="#006fb9"
                 Clicked="navToHomePageBtn_Clicked"
-                Text="Les't Travel" />
+                Text="Let's Travel" />
         </VerticalStackLayout>
     </Grid>
 </ContentPage>

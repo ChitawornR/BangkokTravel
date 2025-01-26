@@ -61,6 +61,9 @@ public partial class DetailPage : ContentPage
 
     async private void favoriteBtn_Clicked(object sender, EventArgs e)
     {
+        await favoriteBtn.ScaleTo(1.2, 100, Easing.CubicInOut);
+        await favoriteBtn.ScaleTo(1.0, 100, Easing.CubicInOut);
+        
         var bindingData = BindingContext;
 
         if (bindingData != null)

@@ -4,7 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="Detail"
     NavigationPage.HasNavigationBar="False">
-    <Grid>
+    <Grid Margin="0,10,0,0">
         <!--  Define Layout Rows  -->
         <Grid.RowDefinitions>
             <!--  Main Content  -->
@@ -15,7 +15,7 @@
 
         <!--  Main Content Area  -->
         <ScrollView Grid.Row="0">
-            <Grid Padding="15">
+            <Grid Padding="25">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="380" />
                     <RowDefinition Height="*" />
@@ -54,6 +54,7 @@
                                 Text="opening: " />
                             <Label FontSize="14" Text="{Binding opening_hours}" />
                         </HorizontalStackLayout>
+                        <!--  Favorite button  -->
                         <ImageButton
                             x:Name="favoriteBtn"
                             Margin="0,0,10,0"

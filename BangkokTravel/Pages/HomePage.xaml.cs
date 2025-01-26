@@ -56,31 +56,43 @@ public partial class HomePage : ContentPage
 
     async private void navFavoritePageBtn_Clicked(object sender, EventArgs e)
     {
+        await navFavoritePageBtn.ScaleTo(1.2, 100, Easing.CubicInOut);
+        await navFavoritePageBtn.ScaleTo(1.0, 100, Easing.CubicInOut);
         await Navigation.PushAsync(new FavoritePage());
     }
 
     async private void historicalBtn_Clicked(object sender, EventArgs e)
     {
+        await historicalBtn.ScaleTo(1.1, 100, Easing.CubicInOut);
+        await historicalBtn.ScaleTo(1.0, 100, Easing.CubicInOut);
         await Navigation.PushAsync(new CategoryPage("Historical"));
     }
 
     async private void natureAndParksBtn_Clicked(object sender, EventArgs e)
     {
+        await natureAndParks.ScaleTo(1.1, 100, Easing.CubicInOut);
+        await natureAndParks.ScaleTo(1.0, 100, Easing.CubicInOut);
         await Navigation.PushAsync(new CategoryPage("Nature and Parks"));
     }
 
     async private void shoppingBtn_Clicked(object sender, EventArgs e)
     {
+        await shoppingBtn.ScaleTo(1.1, 100, Easing.CubicInOut);
+        await shoppingBtn.ScaleTo(1.0, 100, Easing.CubicInOut);
         await Navigation.PushAsync(new CategoryPage("Shopping"));
     }
 
     async private void lifestyleAndNightlifeBtn_Clicked(object sender, EventArgs e)
     {
+        await lifestyleAndNightlifeBtn.ScaleTo(1.1, 100, Easing.CubicInOut);
+        await lifestyleAndNightlifeBtn.ScaleTo(1.0, 100, Easing.CubicInOut);
         await Navigation.PushAsync(new CategoryPage("Lifestyle and Nightlife"));
     }
 
     async private void allPlaceBtn_Clicked(object sender, EventArgs e)
     {
+        await allPlaceBtn.ScaleTo(1.1, 100, Easing.CubicInOut);
+        await allPlaceBtn.ScaleTo(1.0, 100, Easing.CubicInOut);
         await Navigation.PushAsync(new CategoryPage());
     }
 

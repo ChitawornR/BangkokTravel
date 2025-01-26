@@ -17,6 +17,8 @@ public partial class AllPlaceViewModel : ObservableObject
     [ObservableProperty]
     private ObservableCollection<AllPlace> searchedPlaceItems;
 
+    [ObservableProperty]
+    private bool isLoading;
 
     public AllPlaceViewModel()
     {
@@ -28,18 +30,10 @@ public partial class AllPlaceViewModel : ObservableObject
 
     public async Task LoadAllPlaceAsync()
     {
+        IsLoading = true; // เริ่มโหลด
         try
         {
-            // ระบุเส้นทางไฟล์ JSON
             string filePath = Path.Combine(FileSystem.AppDataDirectory, "allBangkokInfo.json");
-
-            // ใช้ code นี้ถ้าแก้ Json
-            //if (File.Exists(filePath))
-            //{
-            //    File.Delete(filePath);  // ลบไฟล์เก่า
-            //}
-
-            // ใช้ Background Thread ในการโหลดข้อมูล
             var jsonContent = await Task.Run(() =>
             {
                 if (!File.Exists(filePath))
@@ -65,57 +59,78 @@ public partial class AllPlaceViewModel : ObservableObject
         {
             Console.WriteLine($"Error loading JSON: {ex.Message}");
         }
+        finally
+        {
+            IsLoading = false; // โหลดเสร็จ
+        }
     }
+
 
     // Function for filter category
     public async Task FilterItemsAsync(string category)
     {
-        Console.WriteLine($"Filtering by category: {category}");
-
-        if (string.IsNullOrEmpty(category) || category.Equals("All Place", StringComparison.OrdinalIgnoreCase))
+        try
         {
-            FilteredPlaceItems = new ObservableCollection<AllPlace>(AllPlaceItems);
-        }
-        else
-        {
-            var filteredItems = await Task.Run(() =>
-            {
-                return AllPlaceItems.Where(item => item.category.Equals(category, StringComparison.OrdinalIgnoreCase)).ToList();
-            });
+            IsLoading = true;
+            Console.WriteLine($"Filtering by category: {category}");
+            Console.WriteLine($"IsLoading is {IsLoading}");
 
-            if (filteredItems.Count == 0)
+            if (string.IsNullOrEmpty(category) || category.Equals("All Place", StringComparison.OrdinalIgnoreCase))
             {
-                Console.WriteLine($"No items found for category: {category}");
+                FilteredPlaceItems = new ObservableCollection<AllPlace>(AllPlaceItems);
+            }
+            else
+            {
+                var filteredItems = await Task.Run(() =>
+                {
+                    return AllPlaceItems.Where(item => item.category.Equals(category, StringComparison.OrdinalIgnoreCase)).ToList();
+                });
+
+                if (filteredItems.Count == 0)
+                {
+                    Console.WriteLine($"No items found for category: {category}");
+                }
+
+                FilteredPlaceItems = new ObservableCollection<AllPlace>(filteredItems);
             }
 
-            FilteredPlaceItems = new ObservableCollection<AllPlace>(filteredItems);
+            Console.WriteLine($"Filtered items count: {FilteredPlaceItems.Count}");
         }
-
-        Console.WriteLine($"Filtered items count: {FilteredPlaceItems.Count}");
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error loading JSON: {ex.Message}");
+        }
+        finally { IsLoading = false; }
     }
 
     // Function for search
     public async Task SearchItemsAsync(string query)
     {
-        Console.WriteLine($"Searching by query: {query}");
+        try
+        {
+            IsLoading = true;
+            Console.WriteLine($"Searching by query: {query}");
 
-        if (string.IsNullOrEmpty(query))
-        {
-            SearchedPlaceItems = new ObservableCollection<AllPlace>(AllPlaceItems);
-        }
-        else
-        {
-            var searchedItems = await Task.Run(() =>
+            if (string.IsNullOrEmpty(query))
             {
-                return AllPlaceItems.Where(item => item.name.ToLower().Contains(query.ToLower())).ToList();
-            });
+                SearchedPlaceItems = new ObservableCollection<AllPlace>(AllPlaceItems);
+            }
+            else
+            {
+                var searchedItems = await Task.Run(() =>
+                {
+                    return AllPlaceItems.Where(item => item.name.ToLower().Contains(query.ToLower())).ToList();
+                });
 
-            SearchedPlaceItems = new ObservableCollection<AllPlace>(searchedItems);
+                SearchedPlaceItems = new ObservableCollection<AllPlace>(searchedItems);
+            }
+
+            Console.WriteLine($"Searched items count: {SearchedPlaceItems.Count}");
         }
-
-        Console.WriteLine($"Searched items count: {SearchedPlaceItems.Count}");
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error loading JSON: {ex.Message}");
+        }
+        finally { IsLoading = false; }
     }
-
-
-
 }
