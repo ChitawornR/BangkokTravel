@@ -6,7 +6,9 @@ namespace BangkokTravel.Pages;
 public partial class CategoryPage : ContentPage
 {
 
-    private AllPlaceViewModel _allPlaceViewModel;
+    private AllPlaceViewModel _allPlaceViewModel = new AllPlaceViewModel();
+
+    private bool isDataLoaded = false;
 
     public CategoryPage(string selectedCategory = "All Place")
     {
@@ -18,17 +20,20 @@ public partial class CategoryPage : ContentPage
     public async Task LoadDataAsync(string selectedCategory = "All Place")
     {
         categoryPageContent.IsVisible = false;
-        _allPlaceViewModel = new AllPlaceViewModel();
-        await _allPlaceViewModel.LoadAllPlaceAsync();  // รอจนกว่าข้อมูลจะโหลดเสร็จ
-        BindingContext = _allPlaceViewModel;
+        if (!isDataLoaded)
+        {
+            //_allPlaceViewModel = new AllPlaceViewModel();
+            await _allPlaceViewModel.LoadAllPlaceAsync();  // รอจนกว่าข้อมูลจะโหลดเสร็จ
+            BindingContext = _allPlaceViewModel;
+        }
 
         // เลือกหมวดหมู่ที่กำหนดจากปุ่มหรือ Picker
         pickerCategory.SelectedItem = selectedCategory;
         // ตั้ง title ให้หัวของ Page
-        titleCategoryPage.Text = selectedCategory;
+        titleCategoryPage.Text = selectedCategory;  
 
         // กรองข้อมูลตามหมวดหมู่ที่เลือก
-        _allPlaceViewModel.FilterItemsAsync(selectedCategory);
+        await _allPlaceViewModel.FilterItemsAsync(selectedCategory);
         categoryPageContent.IsVisible = true;
     }
 

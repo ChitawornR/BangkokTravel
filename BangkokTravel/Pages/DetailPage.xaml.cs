@@ -40,6 +40,8 @@ public partial class DetailPage : ContentPage
     async private void showMapBtn_Clicked(object sender, EventArgs e)
     {
         // ดึงข้อมูล MapUrl จาก BindingContext
+        var favoritePlace = BindingContext as FavoritePlace;
+        var allPlace = BindingContext as AllPlace;
         var popularPlace = BindingContext as PopularPlace ;
         var recommendPlace = BindingContext as RecommendPlace ;
         if (popularPlace != null && !string.IsNullOrEmpty(popularPlace.map))
@@ -51,6 +53,16 @@ public partial class DetailPage : ContentPage
         {
             // เปิด URL ของแผนที่ในเบราว์เซอร์
             await Launcher.OpenAsync(new Uri(recommendPlace.map));
+        }
+        else if(allPlace != null && !string.IsNullOrEmpty(allPlace.map))
+        {
+            // เปิด URL ของแผนที่ในเบราว์เซอร์
+            await Launcher.OpenAsync(new Uri(allPlace.map));
+        }
+        else if(favoritePlace != null && !string.IsNullOrEmpty(favoritePlace.map))
+        {
+            // เปิด URL ของแผนที่ในเบราว์เซอร์
+            await Launcher.OpenAsync(new Uri(favoritePlace.map));
         }
         else
         {

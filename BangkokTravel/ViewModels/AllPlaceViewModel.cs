@@ -20,6 +20,8 @@ public partial class AllPlaceViewModel : ObservableObject
     [ObservableProperty]
     private bool isLoading;
 
+    private bool _isDataLoaded = false;
+
     public AllPlaceViewModel()
     {
         AllPlaceItems = new ObservableCollection<AllPlace>();
@@ -30,30 +32,28 @@ public partial class AllPlaceViewModel : ObservableObject
 
     public async Task LoadAllPlaceAsync()
     {
-        IsLoading = true; // เริ่มโหลด
+        if (_isDataLoaded) return;
+        IsLoading = true;
         try
         {
             string filePath = Path.Combine(FileSystem.AppDataDirectory, "allBangkokInfo.json");
-            var jsonContent = await Task.Run(() =>
+            if (!File.Exists(filePath))
             {
-                if (!File.Exists(filePath))
-                {
-                    using var stream = FileSystem.OpenAppPackageFileAsync("allBangkokInfo.json").Result;
-                    using var reader = new StreamReader(stream);
-                    string json = reader.ReadToEnd();
-                    File.WriteAllText(filePath, json);
-                }
+                using var stream = await FileSystem.OpenAppPackageFileAsync("allBangkokInfo.json");
+                using var reader = new StreamReader(stream);
+                string json = reader.ReadToEnd();
+                File.WriteAllText(filePath, json);
+            }
 
-                return File.ReadAllText(filePath);
-            });
+            string jsonContent = await File.ReadAllTextAsync(filePath);
 
-            var items = await Task.Run(() =>
-            {
-                return JsonSerializer.Deserialize<ObservableCollection<AllPlace>>(jsonContent);
-            });
+            // ใช้ List ชั่วคราว
+            var items = JsonSerializer.Deserialize<List<AllPlace>>(jsonContent);
+            AllPlaceItems = new ObservableCollection<AllPlace>(items);
 
-            AllPlaceItems = items ?? new ObservableCollection<AllPlace>();
-            FilteredPlaceItems = new ObservableCollection<AllPlace>(AllPlaceItems);
+            FilteredPlaceItems = new ObservableCollection<AllPlace>(items);
+
+            _isDataLoaded = true;
         }
         catch (Exception ex)
         {
@@ -61,9 +61,10 @@ public partial class AllPlaceViewModel : ObservableObject
         }
         finally
         {
-            IsLoading = false; // โหลดเสร็จ
+            IsLoading = false;
         }
     }
+
 
 
     // Function for filter category
@@ -72,35 +73,31 @@ public partial class AllPlaceViewModel : ObservableObject
         try
         {
             IsLoading = true;
-            Console.WriteLine($"Filtering by category: {category}");
-            Console.WriteLine($"IsLoading is {IsLoading}");
+            List<AllPlace> filteredItems;
 
             if (string.IsNullOrEmpty(category) || category.Equals("All Place", StringComparison.OrdinalIgnoreCase))
             {
-                FilteredPlaceItems = new ObservableCollection<AllPlace>(AllPlaceItems);
+                filteredItems = AllPlaceItems.ToList();
             }
             else
             {
-                var filteredItems = await Task.Run(() =>
-                {
-                    return AllPlaceItems.Where(item => item.category.Equals(category, StringComparison.OrdinalIgnoreCase)).ToList();
-                });
-
-                if (filteredItems.Count == 0)
-                {
-                    Console.WriteLine($"No items found for category: {category}");
-                }
-
-                FilteredPlaceItems = new ObservableCollection<AllPlace>(filteredItems);
+                filteredItems = await Task.Run(() =>
+                    AllPlaceItems.AsParallel() // ใช้ Parallel LINQ
+                        .Where(item => item.category.Equals(category, StringComparison.OrdinalIgnoreCase))
+                        .ToList()
+                );
             }
 
-            Console.WriteLine($"Filtered items count: {FilteredPlaceItems.Count}");
+            FilteredPlaceItems = new ObservableCollection<AllPlace>(filteredItems);
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"Error loading JSON: {ex.Message}");
+            Console.WriteLine($"Error filtering items: {ex.Message}");
         }
-        finally { IsLoading = false; }
+        finally
+        {
+            IsLoading = false;
+        }
     }
 
     // Function for search
