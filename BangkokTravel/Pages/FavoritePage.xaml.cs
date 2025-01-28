@@ -24,14 +24,20 @@ public partial class FavoritePage : ContentPage
 
     async private void TapGestureRecognizer_Tapped(object sender, TappedEventArgs e)
     {
-        if (sender is BindableObject bindableObject && bindableObject.BindingContext is FavoritePlace selectedItem)
+        if (sender is Border tappedBorder)
         {
-            var detailPage = new DetailPage
-            {
-                BindingContext = selectedItem
-            };
+            tappedBorder.BackgroundColor = Color.FromArgb("#344CB7");
 
-            await Navigation.PushAsync(detailPage);
+            if (sender is BindableObject bindableObject && bindableObject.BindingContext is FavoritePlace selectedItem)
+            {
+                var detailPage = new DetailPage
+                {
+                    BindingContext = selectedItem
+                };
+
+                await Navigation.PushAsync(detailPage);
+            }
+            tappedBorder.BackgroundColor = Color.FromArgb("#ffffff");
         }
 
     }

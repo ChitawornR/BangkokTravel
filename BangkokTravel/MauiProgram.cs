@@ -17,6 +17,7 @@ namespace BangkokTravel
                     fonts.AddFont("Manrope-SemiBold.ttf", "ManropeSemiBold");
                     fonts.AddFont("Manrope-Bold.ttf", "ManropeBold");
                     fonts.AddFont("Pattaya-Regular.ttf", "PattayaRegular");
+                    fonts.AddFont("Prompt-Regular", "ThaiRegular");
                 });
 
 #if DEBUG

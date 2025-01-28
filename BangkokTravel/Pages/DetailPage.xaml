@@ -23,13 +23,15 @@
 
                 <!--  Back Button  -->
                 <AbsoluteLayout ZIndex="1">
-                    <Button
+                    <ImageButton
                         x:Name="backBtnFromDetailPage"
+                        Padding="10"
                         AbsoluteLayout.LayoutBounds="0.025,0.025,50,50"
                         AbsoluteLayout.LayoutFlags="PositionProportional"
-                        BackgroundColor="White"
+                        BackgroundColor="Black"
                         Clicked="backBtnFromDetailPage_Clicked"
-                        ImageSource="backicon" />
+                        CornerRadius="10"
+                        Source="backicon" />
                 </AbsoluteLayout>
 
                 <!--  Image  -->
@@ -65,6 +67,7 @@
                     </Grid>
                     <Label
                         x:Name="descriptionLabel"
+                        FontFamily="ThaiRegular"
                         FontSize="16"
                         LineBreakMode="TailTruncation"
                         MaxLines="7"
@@ -73,7 +76,7 @@
                         <Border.GestureRecognizers>
                             <TapGestureRecognizer x:Name="ReadMoreBtn" Tapped="ReadMoreBtn_Tapped" />
                         </Border.GestureRecognizers>
-                        <Label Text="Read More" TextColor="#006fb9" />
+                        <Label Text="Read More" TextColor="#577BC1" />
                     </Border>
                 </VerticalStackLayout>
             </Grid>
@@ -84,7 +87,6 @@
             Grid.Row="1"
             Margin="0,0,0,10"
             Padding="15"
-            BackgroundColor="White"
             ColumnSpacing="10">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="100" />
@@ -93,15 +95,15 @@
             <VerticalStackLayout>
                 <Label FontFamily="ManropeBold" Text="Price" />
                 <Label
-                    FontFamily="ManropeBold"
+                    FontFamily="ThaiRegular"
                     FontSize="24"
                     Text="{Binding entrance_fee}"
-                    TextColor="#006fb9" />
+                    TextColor="#577BC1" />
             </VerticalStackLayout>
             <Button
                 x:Name="showMapBtn"
                 Grid.Column="1"
-                BackgroundColor="#006fb9"
+                BackgroundColor="#344CB7"
                 Clicked="showMapBtn_Clicked"
                 FontFamily="ManropeBold"
                 FontSize="16"

@@ -4,34 +4,44 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="HomePage"
     NavigationPage.HasNavigationBar="False">
-    <ScrollView VerticalScrollBarVisibility="Never">
+    <ScrollView Margin="0,15,0,0" VerticalScrollBarVisibility="Never">
         <VerticalStackLayout Padding="25" Spacing="10">
             <Grid>
                 <VerticalStackLayout>
-                    <Label FontSize="12" Text="Explore" />
+                    <Label
+                        FontSize="12"
+                        Text="Explore"
+                        TextColor="White" />
                     <Label
                         FontFamily="ManropeBold"
                         FontSize="30"
                         HorizontalOptions="StartAndExpand"
-                        Text="Bangkok" />
+                        Text="Bangkok"
+                        TextColor="White" />
                 </VerticalStackLayout>
                 <!--  Nav to FavoritePage Button  -->
-                <Button
+                <Image
                     x:Name="navFavoritePageBtn"
+                    Margin="0,20,0,0"
                     BackgroundColor="Transparent"
-                    Clicked="navFavoritePageBtn_Clicked"
                     HorizontalOptions="End"
-                    ImageSource="fillhearticon" />
+                    Source="fillhearticon"
+                    VerticalOptions="End"
+                    WidthRequest="30">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="navFavoritePageBtn_Clicked" />
+                    </Image.GestureRecognizers>
+                </Image>
             </Grid>
 
             <!--  Search Bar  -->
             <Border
+                Margin="0,10,0,0"
                 Padding="-4"
                 StrokeShape="RoundRectangle 20,20,20,20"
-                StrokeThickness="0">
+                StrokeThickness="1">
                 <SearchBar
                     x:Name="homePageSearchBar"
-                    BackgroundColor="#EEF3F6"
                     Placeholder="Search . . ."
                     TextChanged="homePageSearchBar_TextChanged" />
             </Border>
@@ -56,28 +66,28 @@
                 Spacing="20">
                 <Button
                     x:Name="historicalBtn"
-                    BackgroundColor="#006fb9"
+                    BackgroundColor="Transparent"
                     Clicked="historicalBtn_Clicked"
                     CornerRadius="17"
                     ImageSource="templeicon.png"
                     WidthRequest="70" />
                 <Button
                     x:Name="natureAndParks"
-                    BackgroundColor="#006fb9"
+                    BackgroundColor="Transparent"
                     Clicked="natureAndParksBtn_Clicked"
                     CornerRadius="17"
                     ImageSource="parkicon.png"
                     WidthRequest="70" />
                 <Button
                     x:Name="shoppingBtn"
-                    BackgroundColor="#006fb9"
+                    BackgroundColor="Transparent"
                     Clicked="shoppingBtn_Clicked"
                     CornerRadius="17"
                     ImageSource="shoppingicon.png"
                     WidthRequest="70" />
                 <Button
                     x:Name="lifestyleAndNightlifeBtn"
-                    BackgroundColor="#006fb9"
+                    BackgroundColor="Transparent"
                     Clicked="lifestyleAndNightlifeBtn_Clicked"
                     CornerRadius="17"
                     ImageSource="beericon.png"
@@ -88,7 +98,7 @@
             <StackLayout>
                 <Button
                     x:Name="allPlaceBtn"
-                    BackgroundColor="#006fb9"
+                    BackgroundColor="#344CB7"
                     Clicked="allPlaceBtn_Clicked"
                     CornerRadius="17"
                     Text="See All Pages -&gt;" />
@@ -99,7 +109,8 @@
                 <Label
                     FontFamily="ManropeBold"
                     FontSize="20"
-                    Text="Popular" />
+                    Text="Popular"
+                    TextColor="White" />
                 <CollectionView HorizontalScrollBarVisibility="Never" ItemsSource="{Binding PopularPlace.PopularItems}">
                     <CollectionView.ItemsLayout>
                         <LinearItemsLayout ItemSpacing="10" Orientation="Horizontal" />
@@ -140,6 +151,7 @@
                                             Text="{Binding name}"
                                             TextColor="White" />
                                         <Label
+                                            FontFamily="ThaiRegular"
                                             FontSize="12"
                                             LineBreakMode="TailTruncation"
                                             MaxLines="2"
@@ -158,7 +170,8 @@
                 <Label
                     FontFamily="ManropeBold"
                     FontSize="20"
-                    Text="Recommend" />
+                    Text="Recommend"
+                    TextColor="White" />
                 <CollectionView HorizontalScrollBarVisibility="Never" ItemsSource="{Binding RecommendPlace.RecommendItems}">
                     <CollectionView.ItemsLayout>
                         <LinearItemsLayout ItemSpacing="10" Orientation="Horizontal" />

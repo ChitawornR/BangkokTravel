@@ -13,24 +13,27 @@
             IsVisible="{Binding IsLoading}"
             VerticalOptions="CenterAndExpand"
             WidthRequest="100"
-            Color="Blue" />
+            Color="#344CB7" />
 
         <ScrollView x:Name="categoryPageContent">
             <VerticalStackLayout Padding="20" Spacing="10">
 
                 <!--  Header  -->
                 <HorizontalStackLayout Margin="0,5,0,0">
-                    <Button
+                    <ImageButton
                         x:Name="backBtnFromCategoryPage"
+                        Margin="0,5,10,0"
                         BackgroundColor="Transparent"
                         Clicked="backBtnFromCategoryPage_Clicked"
-                        ImageSource="backicon" />
+                        Source="backicon"
+                        WidthRequest="35" />
                     <Label
                         x:Name="titleCategoryPage"
                         FontFamily="ManropeBold"
                         FontSize="30"
                         HorizontalOptions="Center"
                         Text="All Place"
+                        TextColor="White"
                         VerticalOptions="Center" />
 
                 </HorizontalStackLayout>
@@ -38,11 +41,11 @@
                 <Border
                     Padding="-4"
                     StrokeShape="RoundRectangle 20,20,20,20"
-                    StrokeThickness="0">
+                    StrokeThickness="1">
                     <SearchBar
-                        BackgroundColor="#EEF3F6"
                         Placeholder="Search . . ."
-                        TextChanged="SearchBar_TextChanged" />
+                        TextChanged="SearchBar_TextChanged"
+                        TextColor="White" />
                 </Border>
 
                 <!--  Search bar result  -->
@@ -63,12 +66,15 @@
                 <Label
                     Margin="0,10,0,-15"
                     FontFamily="ManropeBold"
-                    Text="Choose Category" />
+                    Text="Choose Category"
+                    TextColor="White" />
                 <Picker
                     x:Name="pickerCategory"
                     Title="Choose Category"
                     FontFamily="ManropeRegular"
-                    SelectedIndexChanged="OnCategoryChanged">
+                    SelectedIndexChanged="OnCategoryChanged"
+                    TextColor="White"
+                    TitleColor="White">
                     <Picker.Items>
                         <x:String>All Place</x:String>
                         <x:String>Historical</x:String>
@@ -113,28 +119,35 @@
                                             Spacing="5"
                                             WidthRequest="212">
                                             <Label
+                                                Padding="0,0,15,0"
                                                 FontFamily="ManropeBold"
                                                 FontSize="17"
                                                 LineBreakMode="TailTruncation"
-                                                Text="{Binding name}" />
+                                                Text="{Binding name}"
+                                                TextColor="Black" />
                                             <Label
+                                                Padding="0,0,15,0"
+                                                FontFamily="ThaiRegular"
                                                 FontSize="13"
                                                 LineBreakMode="TailTruncation"
                                                 MaxLines="3"
-                                                Text="{Binding description}" />
+                                                Text="{Binding description}"
+                                                TextColor="Black" />
                                             <!--  time and price  -->
                                             <Grid Margin="0,7,0,0" Padding="0,0,15,0">
                                                 <Label
+                                                    FontFamily="ThaiRegular"
                                                     FontSize="13"
                                                     HorizontalOptions="Start"
                                                     Text="{Binding opening_hours}"
                                                     TextColor="Red"
                                                     WidthRequest="125" />
                                                 <Label
+                                                    FontFamily="ThaiRegular"
                                                     FontSize="13"
                                                     HorizontalOptions="End"
                                                     Text="{Binding entrance_fee}"
-                                                    TextColor="#006fb9"
+                                                    TextColor="#577BC1"
                                                     VerticalOptions="Center" />
                                             </Grid>
                                         </VerticalStackLayout>

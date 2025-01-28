@@ -598,3 +598,5 @@ C:\Users\Chittaworn\source\repos\BangkokTravel\BangkokTravel\obj\Debug\net9.0-wi
 C:\Users\Chittaworn\source\repos\BangkokTravel\BangkokTravel\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\f\Pattaya-Regular.ttf
 C:\Users\Chittaworn\source\repos\BangkokTravel\BangkokTravel\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\deleteicon.scale-100.png
 C:\Users\Chittaworn\source\repos\BangkokTravel\BangkokTravel\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\deleteicon.scale-100.png
+C:\Users\Chittaworn\source\repos\BangkokTravel\BangkokTravel\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Prompt-Regular.ttf
+C:\Users\Chittaworn\source\repos\BangkokTravel\BangkokTravel\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\f\Prompt-Regular.ttf

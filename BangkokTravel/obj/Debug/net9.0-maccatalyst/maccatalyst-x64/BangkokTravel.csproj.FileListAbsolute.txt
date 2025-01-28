@@ -326,3 +326,4 @@ C:\Users\Chittaworn\source\repos\BangkokTravel\BangkokTravel\obj\Debug\net9.0-ma
 C:\Users\Chittaworn\source\repos\BangkokTravel\BangkokTravel\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\BangkokTravel.genruntimeconfig.cache
 C:\Users\Chittaworn\source\repos\BangkokTravel\BangkokTravel\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\ref\BangkokTravel.dll
 C:\Users\Chittaworn\source\repos\BangkokTravel\BangkokTravel\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\deleteicon.png
+C:\Users\Chittaworn\source\repos\BangkokTravel\BangkokTravel\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\f\Prompt-Regular.ttf

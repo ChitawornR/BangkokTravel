@@ -335,6 +335,5 @@ C:\Users\Chittaworn\source\repos\BangkokTravel\BangkokTravel\obj\Debug\net9.0-io
 C:\Users\Chittaworn\source\repos\BangkokTravel\BangkokTravel\obj\Debug\net9.0-ios\iossimulator-x64\BangkokTravel.genruntimeconfig.cache
 C:\Users\Chittaworn\source\repos\BangkokTravel\BangkokTravel\obj\Debug\net9.0-ios\iossimulator-x64\ref\BangkokTravel.dll
 C:\Users\Chittaworn\source\repos\BangkokTravel\BangkokTravel\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Resources\deleteicon.png
-C:\Users\Chittaworn\source\repos\BangkokTravel\BangkokTravel\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\sp\logowithtext_E5C9D56ACF1B7EBADA9C6820A117E68BD08F8FF731B4B31E2E102FEB603E78CC.png
-C:\Users\Chittaworn\source\repos\BangkokTravel\BangkokTravel\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\sp\logowithtext_E5C9D56ACF1B7EBADA9C6820A117E68BD08F8FF731B4B31E2E102FEB603E78CC@2x.png
-C:\Users\Chittaworn\source\repos\BangkokTravel\BangkokTravel\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\sp\logowithtext_E5C9D56ACF1B7EBADA9C6820A117E68BD08F8FF731B4B31E2E102FEB603E78CC@3x.png
+C:\Users\Chittaworn\source\repos\BangkokTravel\BangkokTravel\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\f\Prompt-Regular.ttf
+C:\Users\Chittaworn\source\repos\BangkokTravel\BangkokTravel\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\sp\Resources\logowithtext_AD58FC78A10215EEC6A2D1F48DA7F36AAA42D6623FFDFD9D6DC666CEC1D519E8.png

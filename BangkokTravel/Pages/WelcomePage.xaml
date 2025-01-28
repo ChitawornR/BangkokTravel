@@ -41,7 +41,7 @@
             <Button
                 x:Name="navToHomePageBtn"
                 Margin="0,0,0,20"
-                BackgroundColor="#006fb9"
+                BackgroundColor="#344CB7"
                 Clicked="navToHomePageBtn_Clicked"
                 Text="Let's Travel" />
         </VerticalStackLayout>

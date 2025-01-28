@@ -1,5 +1,6 @@
 ﻿using BangkokTravel.Models;
 using BangkokTravel.ViewModels;
+using Microsoft.Maui.Graphics;
 
 namespace BangkokTravel.Pages;
 
@@ -60,14 +61,20 @@ public partial class CategoryPage : ContentPage
 
     async private void TapGestureRecognizer_Tapped(object sender, TappedEventArgs e)
     {
-        if (sender is BindableObject bindableObject && bindableObject.BindingContext is AllPlace selectedItem)
+        if (sender is Border tappedBorder)
         {
-            var detailPage = new DetailPage
-            {
-                BindingContext = selectedItem
-            };
+            tappedBorder.BackgroundColor = Color.FromArgb("#344CB7");
 
-            await Navigation.PushAsync(detailPage);
+            if (sender is BindableObject bindableObject && bindableObject.BindingContext is AllPlace selectedItem)
+            {
+                var detailPage = new DetailPage
+                {
+                    BindingContext = selectedItem
+                };
+
+                await Navigation.PushAsync(detailPage);
+            }
+            tappedBorder.BackgroundColor = Color.FromArgb("#FFFFFF");
         }
     }
 
