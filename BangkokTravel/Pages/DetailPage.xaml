@@ -57,13 +57,16 @@
                             <Label FontSize="14" Text="{Binding opening_hours}" />
                         </HorizontalStackLayout>
                         <!--  Favorite button  -->
-                        <ImageButton
+                        <Image
                             x:Name="favoriteBtn"
                             Margin="0,0,10,0"
-                            Clicked="favoriteBtn_Clicked"
                             HeightRequest="30"
                             HorizontalOptions="End"
-                            Source="fillhearticon" />
+                            Source="fillhearticon">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="favoriteBtn_Clicked" />
+                            </Image.GestureRecognizers>
+                        </Image>
                     </Grid>
                     <Label
                         x:Name="descriptionLabel"

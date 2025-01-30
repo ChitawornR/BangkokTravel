@@ -56,7 +56,4 @@ public partial class HomePagePopularPlaceViewModel : ObservableObject
             Console.WriteLine($"Error loading JSON: {ex.Message}");
         }
     }
-
-
-
 }
